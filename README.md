@@ -26,5 +26,6 @@ containing the Git commit hash at it stands at compile time:
 
 ~~~ scala
 val commit: String = versionit.gitCommit
-println(commit)
+
+println(commit) // prints e.g. "0123456789abcdef0123456789abcdef01234567"
 ~~~
