@@ -7,6 +7,15 @@ Copyright 2014 Dave Gurnell
 
 Licensed under the Apache 2.0 License
 
+Installation
+------------
+
+Add the following to your `build.sbt`:
+
+~~~ scala
+libraryDependencies += Resolver.url("untyped", url("http://ivy.untyped.com"))(Resolver.ivyStylePatterns)
+~~~
+
 Usage
 -----
 
