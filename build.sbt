@@ -1,18 +1,21 @@
-scalaVersion := "2.11.0"
+name         := "versionit"
+organization := "com.davegurnell"
+version      := "0.1.1"
 
-name := "versionit"
+scalaVersion := "2.11.7"
 
-organization := "com.untyped"
+// Macros:
 
-version := "0.1"
+libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value
 
-libraryDependencies ++= Seq(
-  "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-  "org.specs2" %% "specs2" % "2.3.12" % "test"
-)
+// Testing:
 
-resolvers += Resolver.url("Untyped", url("http://ivy.untyped.com"))(Resolver.ivyStylePatterns)
+libraryDependencies += "org.specs2" %% "specs2" % "2.3.12" % "test"
 
-publishTo := Some(Resolver.sftp("untyped", "ivy.untyped.com", "ivy.untyped.com/public/htdocs")(Resolver.ivyStylePatterns))
+// Bintray:
 
-publishMavenStyle := false
+licenses += ("Apache-2.0", url("http://apache.org/licenses/LICENSE-2.0"))
+
+bintrayPackageLabels in bintray := Seq("scala", "git", "utility")
+
+bintrayRepository in bintray := "maven"

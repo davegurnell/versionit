@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [
+        ".git"
+      , "target"
+      , "logs"
+      , "public"
+      , "project/project"
+      ]
+    }
+  ]
+}
