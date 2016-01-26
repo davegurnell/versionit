@@ -10,7 +10,7 @@ class VersionitMacros(val c: Context) {
 
   def gitCommit: c.Tree = {
     try {
-      val commit = "git rev-parse HEAD".!!
+      val commit = "git rev-parse HEAD".!!.trim
       q"$commit"
     } catch {
       case exn: Throwable =>

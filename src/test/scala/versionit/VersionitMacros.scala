@@ -3,7 +3,9 @@ package versionit
 import org.specs2.mutable._
 
 class VersionitSpec extends Specification {
-  "gitCommit should return a string" >> {
-    gitCommit.isInstanceOf[String] mustEqual true
+  val gitCommitRegex = "^[a-z0-9]{40}$".r
+
+  "gitCommit should return a correctly formatted string" >> {
+    gitCommit must beMatching(gitCommitRegex)
   }
 }

@@ -13,9 +13,9 @@ Installation
 Add the following to your `build.sbt`:
 
 ~~~ scala
-resolvers += Resolver.url("untyped", url("http://ivy.untyped.com"))(Resolver.ivyStylePatterns)
+resolvers += "Awesome Utilities" at "https://dl.bintray.com/davegurnell/maven"
 
-libraryDependencies += "com.untyped" %% "versionit" % "0.1"
+libraryDependencies += "com.davegurnell" %% "versionit" % "0.1.0"
 ~~~
 
 Usage
